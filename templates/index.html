@@ -33,6 +33,10 @@
         return;
       }
 
+      // Show loading message
+      resDiv.innerText = "⏳ Checking toxicity, please wait...";
+      resDiv.className = "mt-6 text-xl font-semibold text-blue-300 animate-pulse";
+
       try {
         const response = await fetch("/predict", {
           method: "POST",
