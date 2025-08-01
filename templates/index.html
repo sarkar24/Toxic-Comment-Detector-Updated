@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Toxic Comment Detector</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-900 to-gray-900 text-white flex flex-col items-center justify-center min-h-screen px-6">
+  <h1 class="text-5xl font-bold mb-4 text-center">🛡️ Toxic Comment Detector</h1>
+  <p class="text-center mb-6 text-lg opacity-80 max-w-xl">
+    A smart, real-time tool powered by AI to detect and filter toxic and hate speech. Try a comment below 👇
+  </p>
+
+  <textarea id="inputText" rows="4" class="w-full max-w-2xl p-4 rounded-lg text-black" placeholder="Type something offensive or polite..."></textarea>
+  <button onclick="checkToxicity()" class="mt-4 px-6 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg shadow-lg">Check Toxicity</button>
+
+  <div id="result" class="mt-6 text-xl font-semibold"></div>
+
+  <p class="mt-10 text-sm opacity-60">
+    🔗 <a href="https://github.com/sarkar24/Toxic-Comment-Detector" class="underline">GitHub Repository</a> |
+    💻 <a href="https://drive.google.com/file/d/1tlcMZA7iFqsEo9a8n_oIAsJvzbtq2OAp/view?usp=sharing" class="underline">Chrome Extension</a>
+  </p>
+
+  <script>
+    async function checkToxicity() {
+      const text = document.getElementById("inputText").value.trim();
+      const resDiv = document.getElementById("result");
+
+      if (!text) {
+        resDiv.innerText = "❗ Please enter some text!";
+        resDiv.className = "mt-6 text-xl font-semibold text-yellow-300";
+        return;
+      }
+
+      try {
+        const response = await fetch("/predict", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ text: text })
+        });
+
+        const data = await response.json();
+        console.log("API Response:", data); // Debugging
+
+        if (!data.label || typeof data.probability !== "number") {
+          throw new Error("Invalid response");
+        }
+
+        const scorePercent = (data.probability * 100).toFixed(2);
+        resDiv.innerText =
+          data.label === "toxic"
+            ? `⚠️ Toxic (Toxicity: ${scorePercent}%)`
+            : `✅ Not Toxic (Confidence: ${scorePercent}%)`;
+
+        resDiv.className =
+          data.label === "toxic"
+            ? "mt-6 text-xl font-semibold text-red-400"
+            : "mt-6 text-xl font-semibold text-green-400";
+      } catch (err) {
+        console.error(err);
+        resDiv.innerText = "❌ Error: Unable to connect to server or invalid response.";
+        resDiv.className = "mt-6 text-xl font-semibold text-yellow-300";
+      }
+    }
+  </script>
+</body>
+</html>

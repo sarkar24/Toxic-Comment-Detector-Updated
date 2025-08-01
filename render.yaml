@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: toxic-comment-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    pythonVersion: 3.10
+    envVars:
+      - key: TRANSFORMERS_CACHE
+        value: /mnt/data
