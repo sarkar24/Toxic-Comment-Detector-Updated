@@ -1,9 +1,9 @@
 # 🧠 Toxic Comment Detection System
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit-green?style=for-the-badge&logo=google-chrome)](https://toxic-comment-detector-updated.onrender.com)
-[![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)](https://www.python.org/)
-[![Made with Flask](https://img.shields.io/badge/Backend-Flask-orange?style=for-the-badge&logo=flask)](https://flask.palletsprojects.com/)
-[![BERT](https://img.shields.io/badge/ML-BERT-yellow?style=for-the-badge&logo=huggingface)](https://huggingface.co/sarkararnab/toxic_bert_model)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit-green?style=for-the-badge&logo=google-chrome)](https://toxic-comment-detector-updated.onrender.com){:target="_blank"}
+[![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)](https://www.python.org/){:target="_blank"}
+[![Made with Flask](https://img.shields.io/badge/Backend-Flask-orange?style=for-the-badge&logo=flask)](https://flask.palletsprojects.com/){:target="_blank"}
+[![BERT](https://img.shields.io/badge/ML-BERT-yellow?style=for-the-badge&logo=huggingface)](https://huggingface.co/sarkararnab/toxic_bert_model){:target="_blank"}
 
 ---
 
@@ -20,13 +20,13 @@ It consists of:
 ## 🚀 Live Demo & Downloads
 
 ### 🌐 **Try the Web App:**  
-🔗 [Toxic Comment Detector Live](https://toxic-comment-detector-updated.onrender.com)
+🔗 <a href="https://toxic-comment-detector-updated.onrender.com" target="_blank" rel="noopener noreferrer">Toxic Comment Detector Live</a>
 
 ### 💻 **Download Chrome Extension ZIP:**  
-🔗 [Download Extension](https://drive.google.com/file/d/1tlcMZA7iFqsEo9a8n_oIAsJvzbtq2OAp/view?usp=drive_link)
+🔗 <a href="https://drive.google.com/file/d/1tlcMZA7iFqsEo9a8n_oIAsJvzbtq2OAp/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Download Extension</a>
 
 🎥 **Chrome Extension Setup Tutorial (YouTube):**  
-🔗 [How to Install & Use the Extension](https://www.youtube.com/watch?v=MnTMe5dBzf8)
+🔗 <a href="https://www.youtube.com/watch?v=MnTMe5dBzf8" target="_blank" rel="noopener noreferrer">How to Install & Use the Extension</a>
 
 ---
 
