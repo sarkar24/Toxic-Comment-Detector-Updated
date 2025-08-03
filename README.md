@@ -1,17 +1,17 @@
 # 🧠 Toxic Comment Detection System
 
-[![Live Demo]<a href="https://toxic-comment-detector-updated.onrender.com" target="_blank">
+<a href="https://toxic-comment-detector-updated.onrender.com" target="_blank">
   <img src="https://img.shields.io/badge/Live%20Demo-Visit-green?style=for-the-badge&logo=google-chrome" />
-</a>]
-[![Python]<a href="https://www.python.org/" target="_blank">
+</a>
+<a href="https://www.python.org/" target="_blank">
   <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python" />
-</a>]
-[![Made with Flask]<a href="https://flask.palletsprojects.com/" target="_blank">
+</a>
+<a href="https://flask.palletsprojects.com/" target="_blank">
   <img src="https://img.shields.io/badge/Backend-Flask-orange?style=for-the-badge&logo=flask" />
-</a>]
-[![BERT]<a href="https://huggingface.co/sarkararnab/toxic_bert_model" target="_blank">
+</a>
+<a href="https://huggingface.co/sarkararnab/toxic_bert_model" target="_blank">
   <img src="https://img.shields.io/badge/ML-BERT-yellow?style=for-the-badge&logo=huggingface" />
-</a>]
+</a>
 
 ---
 
