@@ -1,6 +1,6 @@
 # 🧠 Toxic Comment Detection System
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit-green?style=for-the-badge&logo=google-chrome)](https://toxic-comment-detector-doqs.onrender.com)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit-green?style=for-the-badge&logo=google-chrome)](https://toxic-comment-detector-updated.onrender.com)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)](https://www.python.org/)
 [![Made with Flask](https://img.shields.io/badge/Backend-Flask-orange?style=for-the-badge&logo=flask)](https://flask.palletsprojects.com/)
 [![BERT](https://img.shields.io/badge/ML-BERT-yellow?style=for-the-badge&logo=huggingface)](https://huggingface.co/sarkararnab/toxic_bert_model)
@@ -17,25 +17,36 @@ It consists of:
 
 ---
 
+## 🚀 Live Demo & Downloads
+
+### 🌐 **Try the Web App:**  
+🔗 [Toxic Comment Detector Live](https://toxic-comment-detector-updated.onrender.com)
+
+### 💻 **Download Chrome Extension ZIP:**  
+🔗 [Download Extension](https://drive.google.com/file/d/1tlcMZA7iFqsEo9a8n_oIAsJvzbtq2OAp/view?usp=drive_link)
+
+🎥 **Chrome Extension Setup Tutorial (YouTube):**  
+[How to Install & Use the Extension](https://www.youtube.com/watch?v=MnTMe5dBzf8)
+
+---
+
+## 🧩 How to Use the Chrome Extension Locally
+
+1. **Download** and **unzip** the extension file.  
+2. Open **Chrome** → go to `chrome://extensions/`.  
+3. Enable **Developer Mode** (top-right).  
+4. Click **Load Unpacked** and select the **unzipped folder**.  
+5. Visit **YouTube or Instagram** → Toxic comments will be **blurred automatically**.  
+6. Click **Show** to reveal hidden comments if needed.
+
+---
+
 ## 🌟 Key Highlights
 - ✅ **Real-time** detection of toxic & hate comments  
 - ⚡ **Fine-tuned BERT model** hosted via Flask backend  
 - 🖥️ **Sleek and responsive UI** with probability scores  
 - 🔒 **Chrome Extension** automatically blurs toxic comments on social media  
 - 🌍 **Live & publicly accessible** via Render deployment  
-
----
-
-## 🚀 Live Demo & Downloads
-
-### 🌐 **Try the Web App:**  
-🔗 [Toxic Comment Detector Live](https://toxic-comment-detector-doqs.onrender.com)
-
-### 💻 **Download Chrome Extension ZIP:**  
-🔗 [Download Extension](https://drive.google.com/file/d/1tlcMZA7iFqsEo9a8n_oIAsJvzbtq2OAp/view?usp=drive_link)
-
-🎥 **Video Tutorial (YouTube):**  
-[How to Install & Use the Extension](https://www.youtube.com/watch?v=MnTMe5dBzf8)
 
 ---
 
@@ -68,13 +79,10 @@ It consists of:
 2. Click **"Check Toxicity"**.
 3. Instantly see **prediction** (Toxic / Not Toxic) and **confidence score**.
 
-### 🧩 Chrome Extension (Local Setup)
-1. **Download** and **unzip** the extension file.  
-2. Open **Chrome** → go to `chrome://extensions/`.  
-3. Enable **Developer Mode** (top-right).  
-4. Click **Load Unpacked** and select the **unzipped folder**.  
-5. Visit **YouTube or Instagram** → Toxic comments will be **blurred automatically**.  
-6. Click **Show** to reveal hidden comments if needed.
+### 🧩 Extension
+- Visit YouTube or Instagram.
+- Toxic comments will be blurred automatically.
+- You can also unhide the blurred comment on your wish.
 
 ---
 
