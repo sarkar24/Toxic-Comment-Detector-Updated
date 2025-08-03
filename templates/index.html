@@ -5,22 +5,52 @@
   <title>Toxic Comment Detector</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { animation: fadeIn 1s ease-in; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
 </head>
-<body class="bg-gradient-to-br from-purple-900 to-gray-900 text-white flex flex-col items-center justify-center min-h-screen px-6">
-  <h1 class="text-5xl font-bold mb-4 text-center">🛡️ Toxic Comment Detector</h1>
-  <p class="text-center mb-6 text-lg opacity-80 max-w-xl">
-    A smart, real-time tool powered by AI to detect and filter toxic and hate speech. Try a comment below 👇
-  </p>
+<body class="bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white flex flex-col items-center justify-center min-h-screen px-6">
 
-  <textarea id="inputText" rows="4" class="w-full max-w-2xl p-4 rounded-lg text-black" placeholder="Type something offensive or polite..."></textarea>
-  <button onclick="checkToxicity()" class="mt-4 px-6 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg shadow-lg">Check Toxicity</button>
+  <!-- Header -->
+  <div class="text-center mb-8">
+    <h1 class="text-5xl font-extrabold mb-2">🛡️ Toxic Comment Detector</h1>
+    <p class="text-lg opacity-80 max-w-xl mx-auto">
+      Detect and filter toxic or hate comments in real time using AI.  
+      Type a comment below and see the magic!
+    </p>
+  </div>
 
-  <div id="result" class="mt-6 text-xl font-semibold"></div>
+  <!-- Glass Card -->
+  <div class="glass-card w-full max-w-xl rounded-2xl p-6 shadow-2xl flex flex-col items-center">
+    
+    <textarea id="inputText" rows="3" class="w-full p-3 rounded-xl text-black focus:outline-none text-base" placeholder="Type something offensive or polite..."></textarea>
+    
+    <button onclick="checkToxicity()" class="mt-4 px-8 py-2.5 bg-purple-600 hover:bg-purple-700 transition rounded-xl shadow-lg font-semibold text-base">
+      🚀 Check Toxicity
+    </button>
 
-  <p class="mt-10 text-sm opacity-60">
-    🔗 <a href="https://github.com/sarkar24/Toxic-Comment-Detector" class="underline">GitHub Repository</a> |
-    💻 <a href="https://drive.google.com/file/d/1tlcMZA7iFqsEo9a8n_oIAsJvzbtq2OAp/view?usp=sharing" class="underline">Chrome Extension</a>
-  </p>
+    <!-- Result Section -->
+    <div id="result" class="mt-5 text-xl font-semibold text-center transition-all"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-12 text-center text-base opacity-80">
+    <div class="flex flex-col items-center gap-1">
+      <div class="space-x-4">
+        🔗 <a href="https://github.com/sarkar24/Toxic-Comment-Detector-Updated" target="_blank" rel="noopener noreferrer" class="underline hover:text-purple-300 transition">GitHub Repo</a> 
+        | 💻 <a href="https://drive.google.com/file/d/1tlcMZA7iFqsEo9a8n_oIAsJvzbtq2OAp/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="underline hover:text-purple-300 transition">Chrome Extension</a>
+        | 🎥 <a href="https://www.youtube.com/watch?v=MnTMe5dBzf8" target="_blank" rel="noopener noreferrer" class="underline hover:text-purple-300 transition">Setup Tutorial</a>
+      </div>
+      <p class="mt-1 text-sm">Made with ❤️ and AI</p>
+    </div>
+  </footer>
 
   <script>
     async function checkToxicity() {
@@ -33,8 +63,7 @@
         return;
       }
 
-      // Show loading message
-      resDiv.innerText = "⏳ Checking toxicity, please wait...";
+      resDiv.innerText = "⏳ Checking toxicity...";
       resDiv.className = "mt-6 text-xl font-semibold text-blue-300 animate-pulse";
 
       try {
@@ -45,22 +74,21 @@
         });
 
         const data = await response.json();
-        console.log("API Response:", data); // Debugging
+        console.log("API Response:", data);
 
         if (!data.label || typeof data.probability !== "number") {
           throw new Error("Invalid response");
         }
 
         const scorePercent = (data.probability * 100).toFixed(2);
-        resDiv.innerText =
-          data.label === "toxic"
-            ? `⚠️ Toxic (Toxicity: ${scorePercent}%)`
-            : `✅ Not Toxic (Confidence: ${scorePercent}%)`;
+        resDiv.className = "mt-6 text-xl font-semibold";
 
-        resDiv.className =
-          data.label === "toxic"
-            ? "mt-6 text-xl font-semibold text-red-400"
-            : "mt-6 text-xl font-semibold text-green-400";
+        if (data.label === "toxic") {
+          resDiv.innerHTML = `⚠️ <span class="text-red-400">Toxic</span> (Toxicity: ${scorePercent}%)`;
+        } else {
+          resDiv.innerHTML = `✅ <span class="text-green-400">Not Toxic</span> (Confidence: ${scorePercent}%)`;
+        }
+
       } catch (err) {
         console.error(err);
         resDiv.innerText = "❌ Error: Unable to connect to server or invalid response.";
