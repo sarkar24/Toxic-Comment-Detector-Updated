@@ -56,7 +56,7 @@ It consists of:
 ![Web App Screenshot](images/web-ui.jpg)
 
 ### 🧩 Chrome Extension in Action
-![Web App Screenshot](images/extensions-demo.jpg)
+![Web App Screenshot](images/extension-demo.jpg)
 
 ---
 
