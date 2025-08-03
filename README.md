@@ -26,7 +26,7 @@ It consists of:
 🔗 [Download Extension](https://drive.google.com/file/d/1tlcMZA7iFqsEo9a8n_oIAsJvzbtq2OAp/view?usp=drive_link)
 
 🎥 **Chrome Extension Setup Tutorial (YouTube):**  
-[How to Install & Use the Extension](https://www.youtube.com/watch?v=MnTMe5dBzf8)
+🔗 [How to Install & Use the Extension](https://www.youtube.com/watch?v=MnTMe5dBzf8)
 
 ---
 
@@ -53,10 +53,10 @@ It consists of:
 ## 🖼️ Screenshots
 
 ### 🌐 Web App
-*(Add screenshot of the web interface here)*
+![Web App Screenshot](images/web-ui.jpg)
 
 ### 🧩 Chrome Extension in Action
-*(Add screenshot or GIF of blurred toxic comment here)*
+![Web App Screenshot](images/extensions-demo.jpg)
 
 ---
 
