@@ -1,64 +1,97 @@
 # 🧠 Toxic Comment Detection System
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit-green?style=for-the-badge&logo=google-chrome)](https://toxic-comment-detector-doqs.onrender.com)
+[![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)](https://www.python.org/)
+[![Made with Flask](https://img.shields.io/badge/Backend-Flask-orange?style=for-the-badge&logo=flask)](https://flask.palletsprojects.com/)
+[![BERT](https://img.shields.io/badge/ML-BERT-yellow?style=for-the-badge&logo=huggingface)](https://huggingface.co/sarkararnab/toxic_bert_model)
+
+---
+
 ## 🔍 Overview
-The **Toxic Comment Detection System** is an AI-powered web application that identifies toxic and hate speech in real-time. It uses a fine-tuned BERT model to predict the toxicity of user-input text and displays results instantly. The system also includes a **Chrome Extension** that blurs out toxic comments on social media platforms such as YouTube and Instagram.
+The **Toxic Comment Detection System** is an **AI-powered tool** that identifies **toxic and hate comments** in real time.  
+It consists of:
+
+- 🌐 **Web App** for checking individual comments  
+- 🧩 **Chrome Extension** that **blurs toxic comments** on YouTube & Instagram  
+- 🤖 **Custom BERT model** fine-tuned for English toxic comment detection
 
 ---
 
-## 🚀 Live Preview
-### 🌐 Try it Online:
-  🔗 https://toxic-comment-detector-doqs.onrender.com
-### 💻 Download Chrome Extension ZIP:
-  Click the button on the landing page or use https://drive.google.com/file/d/1tlcMZA7iFqsEo9a8n_oIAsJvzbtq2OAp/view?usp=drive_link to download the extension .zip file.
+## 🌟 Key Highlights
+- ✅ **Real-time** detection of toxic & hate comments  
+- ⚡ **Fine-tuned BERT model** hosted via Flask backend  
+- 🖥️ **Sleek and responsive UI** with probability scores  
+- 🔒 **Chrome Extension** automatically blurs toxic comments on social media  
+- 🌍 **Live & publicly accessible** via Render deployment  
 
 ---
 
-## 🧩 How to Use the Chrome Extension Locally
+## 🚀 Live Demo & Downloads
 
-1. **Download** and **unzip** the extension ZIP file.
-2. Open **Google Chrome** and go to `chrome://extensions/`.
-3. Turn on **Developer Mode** (top right).
-4. Click **"Load unpacked"**.
-5. Select the **unzipped folder** of the extension.
-6. Extension is now added and will automatically blur toxic comments on supported platforms.
+### 🌐 **Try the Web App:**  
+🔗 [Toxic Comment Detector Live](https://toxic-comment-detector-doqs.onrender.com)
+
+### 💻 **Download Chrome Extension ZIP:**  
+🔗 [Download Extension](https://drive.google.com/file/d/1tlcMZA7iFqsEo9a8n_oIAsJvzbtq2OAp/view?usp=drive_link)
+
+🎥 **Video Tutorial (YouTube):**  
+[How to Install & Use the Extension](https://www.youtube.com/watch?v=MnTMe5dBzf8)
+
+---
+
+## 🖼️ Screenshots
+
+### 🌐 Web App
+*(Add screenshot of the web interface here)*
+
+### 🧩 Chrome Extension in Action
+*(Add screenshot or GIF of blurred toxic comment here)*
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer      | Technology                |
-|------------|---------------------------|
-| Frontend   | React.js, HTML, CSS       |
-| Backend    | Flask (Python)            |
-| ML Model   | BERT (`transformers`, `tensorflow`) |
-| Browser Extension | JavaScript, Manifest v3      |
+| Layer             | Technology                                 |
+|-------------------|--------------------------------------------|
+| **Frontend**      | React.js, TailwindCSS, HTML, CSS           |
+| **Backend**       | Flask (Python)                             |
+| **ML Model**      | BERT (`transformers`, `tensorflow`)        |
+| **Browser Ext.**  | JavaScript, Manifest v3                    |
+| **Deployment**    | Render (Web)                               |
 
 ---
 
-## 🚀 Features
-- Real-time comment toxicity detection with high accuracy.
-- Web UI for checking individual comments.
-- Chrome Extension that detects and blurs toxic comments automatically.
-- Probability score of toxicity with intuitive feedback.
-- Custom fine-tuned BERT model hosted via Flask backend.
+## 📖 Usage Guide
 
----
-
-## 🌐 Usage
 ### 🌍 Web App
-- Enter any text or comment into the input box.
-- Click Check Toxicity.
-- You'll see the prediction label (toxic/non-toxic) and confidence score.
+1. Enter any text or comment in the input box.
+2. Click **"Check Toxicity"**.
+3. Instantly see **prediction** (Toxic / Not Toxic) and **confidence score**.
 
-### 🧩 Extension
-- Visit YouTube or Instagram.
-- Toxic comments will be blurred automatically.
-- You can also unhide the blurred comment on your wish.
+### 🧩 Chrome Extension (Local Setup)
+1. **Download** and **unzip** the extension file.  
+2. Open **Chrome** → go to `chrome://extensions/`.  
+3. Enable **Developer Mode** (top-right).  
+4. Click **Load Unpacked** and select the **unzipped folder**.  
+5. Visit **YouTube or Instagram** → Toxic comments will be **blurred automatically**.  
+6. Click **Show** to reveal hidden comments if needed.
 
 ---
 
 ## 📚 Acknowledgments
-- Hugging Face 🤗 for BERT
-- Flask for serving my ML Model
-- React.js for frontend
-- Google Chrome for extension support
+- 🤗 **Hugging Face** for BERT model & transformers library  
+- 🐍 **Flask** for serving ML model as API  
+- ⚛️ **React.js & TailwindCSS** for the responsive frontend  
+- 🌐 **Google Chrome** for extension support  
+
+---
+
+## ⭐ Pro Tip
+> Blurring toxic comments while browsing makes the internet **a calmer place**.  
+> Give it a try and enjoy **clean social media feeds**! ✨
+
+---
+
+### 🏆 Star this repo if you like it!  
+It helps more people discover this project 🚀
+
